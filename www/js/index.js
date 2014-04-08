@@ -19,8 +19,8 @@
 var app = {
     // Application Constructor
     initialize: function() {
-        this.bindEvents();
-        // this.onDeviceReady();
+         //this.bindEvents();
+        this.onDeviceReady();
     },
     // Bind Event Listeners
     //
@@ -50,6 +50,6 @@ var app = {
 
         appTestElement.attr('style', 'display:none;');
         appCorpElement.attr('style', 'display:block;');
-        console.log('Received Event: ' + id);
+        //console.log('Received Event: ' + id);
     }
 };
