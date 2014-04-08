@@ -12,48 +12,113 @@
         <link rel="stylesheet" type="text/css" href="css/brick-1.0.1.min.css"/>
         
         <title>Automag.tn</title>
-<style>
-.ui.avatar.images .image, .ui.avatar.images img, .ui.avatar.image img, .ui.avatar.image {
-width: 25%;
-height: 55px;
-border-radius: 0 !important;
-}
-x-deck > x-card{
-overflow: auto !important;
-}
-.ui.list .item > .content{
-display: list-item !important;
-
-}
-.ui.list .item {
-background-image: url('assets/images/arraowbglist.png');
-background-repeat: no-repeat;
-background-position-x: right;
-background-position-y: center;
-background: #FFF;
-background: -moz-linear-gradient(top, white 0%, #efeded 100%);
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFF), color-stop(100%, #EFEDED));
-background: -webkit-linear-gradient(top, #FFF 0%, #EFEDED 100%);
-background: -o-linear-gradient(top, white 0%, #efeded 100%);
-background: -ms-linear-gradient(top, white 0%, #efeded 100%);
-background: linear-gradient(to bottom, #FFF 0%, #EFEDED 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#efeded',GradientType=0 );
-}
-.date {
-font-size: 12px;
-float: left;
-color: #F06B0E;
-line-height: 24px;
-}
-.date span {
-font-size: 12px;
-color: #000;
-}
-.ui.menu .teal.active.item, .ui.teal.menu .active.item {
-border-color: #80B538 !important;
-color: #80B538 !important;
-}
-</style>
+        <style>
+        .ui.avatar.images .image, .ui.avatar.images img, .ui.avatar.image img, .ui.avatar.image {
+        width: 25%;
+        height: 55px;
+        border-radius: 0 !important;
+        }
+        x-deck > x-card{
+        overflow: none !important;
+        }
+        .ui.list .item > .content{
+        display: list-item !important;
+        }
+        .ui.list .item {
+        background-image: url('assets/images/arraowbglist.png');
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: center;
+        background: #FFF;
+        background: -moz-linear-gradient(top, white 0%, #efeded 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFF), color-stop(100%, #EFEDED));
+        background: -webkit-linear-gradient(top, #FFF 0%, #EFEDED 100%);
+        background: -o-linear-gradient(top, white 0%, #efeded 100%);
+        background: -ms-linear-gradient(top, white 0%, #efeded 100%);
+        background: linear-gradient(to bottom, #FFF 0%, #EFEDED 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#efeded',GradientType=0 );
+        }
+        .date {
+        font-size: 12px;
+        float: left;
+        color: #F06B0E;
+        line-height: 24px;
+        }
+        .date span {
+        font-size: 12px;
+        color: #000;
+        }
+        .ui.menu .teal.active.item, .ui.teal.menu .active.item {
+        border-color: #80B538 !important;
+        color: #80B538 !important;
+        }
+        #scroller {
+        position:absolute; z-index:1;
+        /*  -webkit-touch-callout:none;*/
+        -webkit-tap-highlight-color:rgba(0,0,0,0);
+        width:100%;
+        padding:0;
+        }
+        #scroller ul {
+        list-style:none;
+        padding:0;
+        margin:0;
+        width:100%;
+        text-align:left;
+        }
+        #myFrame {
+        position:absolute;
+        top:0; left:0;
+        }
+        /**
+        *
+        * Pull down styles
+        *
+        */
+        #pullDown, #pullUp {
+        background:#fff;
+        height:40px;
+        line-height:40px;
+        padding:5px 10px;
+        border-bottom:1px solid #ccc;
+        font-weight:bold;
+        font-size:14px;
+        color:#888;
+        }
+        #pullDown .pullDownIcon, #pullUp .pullUpIcon  {
+        display:block; float:left;
+        width:40px; height:40px;
+        background:url(pull-icon@2x.png) 0 0 no-repeat;
+        -webkit-background-size:40px 80px; background-size:40px 80px;
+        -webkit-transition-property:-webkit-transform;
+        -webkit-transition-duration:250ms;
+        }
+        #pullDown .pullDownIcon {
+        -webkit-transform:rotate(0deg) translateZ(0);
+        }
+        #pullUp .pullUpIcon  {
+        -webkit-transform:rotate(-180deg) translateZ(0);
+        }
+        #pullDown.flip .pullDownIcon {
+        -webkit-transform:rotate(-180deg) translateZ(0);
+        }
+        #pullUp.flip .pullUpIcon {
+        -webkit-transform:rotate(0deg) translateZ(0);
+        }
+        #pullDown.loading .pullDownIcon, #pullUp.loading .pullUpIcon {
+        background-position:0 100%;
+        -webkit-transform:rotate(0deg) translateZ(0);
+        -webkit-transition-duration:0ms;
+        -webkit-animation-name:loading;
+        -webkit-animation-duration:2s;
+        -webkit-animation-iteration-count:infinite;
+        -webkit-animation-timing-function:linear;
+        }
+        @-webkit-keyframes loading {
+        from { -webkit-transform:rotate(0deg) translateZ(0); }
+        to { -webkit-transform:rotate(360deg) translateZ(0); }
+        }
+        </style>
     </head>
         <body>
             <div class="app">
@@ -102,9 +167,20 @@ color: #80B538 !important;
                 </x-card>
                 <x-card transition-type="slide-left">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</x-card>
                 <x-card transition-type="slide-right">
-                    <div class="ui divided list" id="listenews">
-                       
-                      </div>
+                <div id="wrapper">
+                    <div id="scroller">
+                       <!-- <div id="pullDown">
+                        <span class="pullDownIcon"></span><span class="pullDownLabel">Pull down to refresh...</span>
+                        </div>-->
+                        <input type="hidden" id="countnews" value="10">
+                        <ul class="ui divided list" id="listenews">
+                        
+                        </ul>
+                        <div id="pullUp">
+                        <span class="pullUpIcon"></span><span class="pullUpLabel">Pull up to refresh...</span>
+                        </div>
+                    </div>
+                   </div> 
                 </x-card>
                 <x-card  transition-type="slide-up">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</x-card>
                 
@@ -120,7 +196,10 @@ color: #80B538 !important;
         </div>
         <!-- <script type="text/javascript" src="phonegap.js"></script>-->
         <script src="js/jquery-1.10.1.min.js"></script>
+        
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/iscroll.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
         <script type="text/javascript" src="js/brick-1.0.1.min.js"></script>
         <script type="text/javascript" src="assets/Semantic-UI/modules/dropdown.min.js"></script>
         <script type="text/javascript" src="assets/Semantic-UI/modules/popup.min.js"></script>
@@ -128,15 +207,15 @@ color: #80B538 !important;
         <script type="text/javascript" src="assets/Semantic-UI/modules/sidebar.min.js"></script>
         <script type="text/javascript">
         app.initialize();
-       
+        
         
         document.addEventListener('DOMComponentsLoaded', function(){
-         var deck = getDeck(document);
+        var deck = getDeck(document);
         function getDeck(document){
         return document.querySelector("x-deck");
         }
-         deck.showCard(2);
-       
+        deck.showCard(2);
+        
         $('#showCard1').click(function(){
         deck.showCard(0);
         $('#leftside .item').removeClass('active');
@@ -166,34 +245,6 @@ color: #80B538 !important;
         $('#leftside').first().sidebar('attach events', '.toggle.leftside');
         $('.toggle.leftside') .removeClass('disabled');
         });
-
-$.getJSON( "http://www.automag.tn/mobileapp?node=Listnews-root&page=1&start=0&limit=10", function( data ) {
-  var dataC = [];
- 
-   
-    $.each( data.items, function(index,item) {
-   
-    dataC.push( 
-        '<div class="item">'
-             +'<img class="ui avatar image" src="'+item.photoMin+'">'
-             +'<div class="content">'
-                 +'<div class="header">' + item.titre + '</div>'
-                 +'<div class="date">' 
-                 + item.categorie
-                 + ' <span> | '
-                 +item.date   
-                 + '</span>'
-                 + '</div>'
-             +'</div>'
-        +'</div>');
-
-    
-
-   });
-$("#listenews").append(dataC.join( "" ));
- 
-
-});
 
         </script>
     </body>
