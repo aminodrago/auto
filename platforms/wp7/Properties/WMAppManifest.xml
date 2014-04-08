@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Deployment AppPlatformVersion="7.1" xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment">
+    <App Author="Automag author" BitsPerPixel="32" Description="Apache Cordova for Windows Phone 7" Genre="apps.normal" ProductID="{D23F42BB-A032-4955-9B97-37437B2E914F}" Publisher="Automag" RuntimeType="Silverlight" Title="Automag" Version="1.0.0" xmlns="">
+        <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
+        <Capabilities>
+            <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+        </Capabilities>
+        <Tasks>
+            <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
+        </Tasks>
+        <Tokens>
+            <PrimaryToken TaskName="_default" TokenID="AutomagToken">
+                <TemplateType5>
+                    <BackgroundImageURI IsRelative="true" IsResource="false">Background.png</BackgroundImageURI>
+                    <Count>0</Count>
+                    <Title>Automag</Title>
+                </TemplateType5>
+            </PrimaryToken>
+        </Tokens>
+    </App>
+</Deployment>
