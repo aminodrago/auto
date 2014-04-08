@@ -1,4 +1,19 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget>
     <access origin="*" />
+    <feature name="Device">
+        <param name="wp-package" value="Device" />
+    </feature>
+    <feature name="NetworkStatus">
+        <param name="wp-package" value="NetworkStatus" />
+    </feature>
+    <feature name="File">
+        <param name="wp-package" value="File" />
+    </feature>
+    <feature name="FileTransfer">
+        <param name="wp-package" value="FileTransfer" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="wp-package" value="SplashScreen" />
+    </feature>
 </widget>
