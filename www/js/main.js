@@ -53,15 +53,17 @@ function pullUpAction () {
         
         });
         $("#listenews").append(dataC.join( "" ));
-        countnews=countnews+dataC.length;
-        $('#countnews').val(countnews);
+        countnews=eval(countnews)+eval(dataC.length);
+        $('#countnews').val(eval(countnews));
         });
 
 /***************************/
 var nexCount=eval(countnews)+7;
-$.getJSON( "http://www.automag.tn/mobileapp?node=Listnews-root&page=1&start="+nexCount+"&limit=7", function( data ) {
 
-   if(data.items.length>7){
+$.getJSON( "http://www.automag.tn/mobileapp?node=Listnews-root&page=1&start="+nexCount+"&limit=7", function( data ) {
+  console.log(data.items.length+"***");
+   if(eval(data.items.length)>=7){
+    console.log(data.items.length);
  myScroll.refresh();
 
    }
