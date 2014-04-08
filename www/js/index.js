@@ -48,8 +48,8 @@ var app = {
         receivedElement.attr('style', 'display:block;');
 
 
-        //appTestElement.attr('style', 'display:none;');
-        //appCorpElement.attr('style', 'display:block;');
-        //console.log('Received Event: ' + id);
+        appTestElement.attr('style', 'display:none;');
+        appCorpElement.attr('style', 'display:block;');
+        console.log('Received Event: ' + id);
     }
 };
