@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" href="assets/css/semantic.css" />
+        <link rel="stylesheet" href="assets/Semantic-UI/modules/sidebar.min.css" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/brick-1.0.1.min.css"/>
+        
+        <title>Automag.tn</title>
+<style>
+.ui.avatar.images .image, .ui.avatar.images img, .ui.avatar.image img, .ui.avatar.image {
+width: 25%;
+height: 55px;
+border-radius: 0 !important;
+}
+x-deck > x-card{
+overflow: auto !important;
+}
+.ui.list .item > .content{
+display: list-item !important;
+
+}
+.ui.list .item {
+background-image: url('assets/images/arraowbglist.png');
+background-repeat: no-repeat;
+background-position-x: right;
+background-position-y: center;
+background: #FFF;
+background: -moz-linear-gradient(top, white 0%, #efeded 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFF), color-stop(100%, #EFEDED));
+background: -webkit-linear-gradient(top, #FFF 0%, #EFEDED 100%);
+background: -o-linear-gradient(top, white 0%, #efeded 100%);
+background: -ms-linear-gradient(top, white 0%, #efeded 100%);
+background: linear-gradient(to bottom, #FFF 0%, #EFEDED 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#efeded',GradientType=0 );
+}
+.date {
+font-size: 12px;
+float: left;
+color: #F06B0E;
+line-height: 24px;
+}
+.date span {
+font-size: 12px;
+color: #000;
+}
+.ui.menu .teal.active.item, .ui.teal.menu .active.item {
+border-color: #80B538 !important;
+color: #80B538 !important;
+}
+</style>
+    </head>
+        <body>
+            <div class="app">
+            <h1>PhoneGap</h1>
+                <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+                
+            </div>
+            
+        </div>
+            <div id="appcorp">
+            <x-layout   hide-trigger="scroll" content-maximized>
+                <header>
+                <x-appbar id="top-toolbar">
+                
+                <div class='ui toggle leftside '> <i class="list layout icon"></i> </div>
+                <h1  class="x-title"></h1>
+                <div class='ui toggle addside '> <i class="add icon"></i> </div>
+                <div class='ui toggle searchside '> <i class="search icon"></i> </div>
+                </x-appbar>
+            </header>
+                <section id="sectioncorp">
+                    <div class="ui red vertical right sidebar menu" id="Serchesidebar">
+                        <div class="item">
+                        <div class="ui input"><input type="text" placeholder="Search..."></div>
+                    </div>
+                </div>
+                    <div class="ui teal left vertical sidebar  menu"  id="leftside">
+                    <a class="item" id="showCard1">
+                    <i class="home icon"></i> Accueil
+                    </a>
+                    <a class="item" id="showCard2">
+                    <i class="mail icon"></i> Acheter neuf
+                    </a>
+                    <a class="item"  id="showCard3">
+                    <i class="user icon"></i> Acheter occasion
+                    </a>
+                    <a class="item"  id="showCard4">
+                    <i class="user icon"></i> Contact
+                    </a>
+                </div>
+                <x-deck >
+                <x-card  transition-type="fade-scale" >
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
+                </x-card>
+                <x-card transition-type="slide-left">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</x-card>
+                <x-card transition-type="slide-right">
+                    <div class="ui divided list" id="listenews">
+                       
+                      </div>
+                </x-card>
+                <x-card  transition-type="slide-up">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</x-card>
+                
+                </x-deck>
+            </section>
+                <footer>
+                <x-tabbar>
+                
+                </x-tabbar>
+            </footer>
+            </x-layout>
+            
+        </div>
+        <!-- <script type="text/javascript" src="phonegap.js"></script>-->
+        <script src="js/jquery-1.10.1.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/brick-1.0.1.min.js"></script>
+        <script type="text/javascript" src="assets/Semantic-UI/modules/dropdown.min.js"></script>
+        <script type="text/javascript" src="assets/Semantic-UI/modules/popup.min.js"></script>
+        <script type="text/javascript" src="assets/Semantic-UI/modules/transition.min.js"></script>
+        <script type="text/javascript" src="assets/Semantic-UI/modules/sidebar.min.js"></script>
+        <script type="text/javascript">
+        app.initialize();
+       
+        
+        document.addEventListener('DOMComponentsLoaded', function(){
+         var deck = getDeck(document);
+        function getDeck(document){
+        return document.querySelector("x-deck");
+        }
+         deck.showCard(2);
+       
+        $('#showCard1').click(function(){
+        deck.showCard(0);
+        $('#leftside .item').removeClass('active');
+        $(this).addClass('active');
+        $('#leftside').removeClass('active');
+        });
+        $('#showCard2').click(function(){
+        deck.showCard(1);
+        $('#leftside .item').removeClass('active');
+        $(this).addClass('active');
+        $('#leftside').removeClass('active');
+        });
+        $('#showCard3').click(function(){
+        deck.showCard(2);
+        $('#leftside .item').removeClass('active');
+        $(this).addClass('active');
+        $('#leftside').removeClass('active');
+        });
+        $('#showCard4').click(function(){
+        deck.showCard(3);
+        $('#leftside .item').removeClass('active');
+        $(this).addClass('active');
+        $('#leftside').removeClass('active');
+        });
+        $('#Serchesidebar').first().sidebar('attach events', '.toggle.searchside');
+        $('.toggle.searchside') .removeClass('disabled');
+        $('#leftside').first().sidebar('attach events', '.toggle.leftside');
+        $('.toggle.leftside') .removeClass('disabled');
+        });
+
+$.getJSON( "http://www.automag.tn/mobileapp?node=Listnews-root&page=1&start=0&limit=10", function( data ) {
+  var dataC = [];
+ 
+   
+    $.each( data.items, function(index,item) {
+   
+    dataC.push( 
+        '<div class="item">'
+             +'<img class="ui avatar image" src="'+item.photoMin+'">'
+             +'<div class="content">'
+                 +'<div class="header">' + item.titre + '</div>'
+                 +'<div class="date">' 
+                 + item.categorie
+                 + ' <span> | '
+                 +item.date   
+                 + '</span>'
+                 + '</div>'
+             +'</div>'
+        +'</div>');
+
+    
+
+   });
+$("#listenews").append(dataC.join( "" ));
+ 
+
+});
+
+        </script>
+    </body>
+</html>
