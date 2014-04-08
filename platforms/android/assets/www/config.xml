@@ -14,6 +14,11 @@ PhoneGap Team
 <content src="index.html" />
         <preference name="Fullscreen" value="true" />
         <preference name="WebViewBounce" value="true" />
+        <preference name="BackgroundColor" value="0xff0000ff"/>
+       <feature name="Device" value="org.apache.cordova.device" />
+ <feature name="DeviceOrientation" value="org.apache.cordova.device-orientation" />
+  <feature name="Splashscreen" value="org.apache.cordova.splashscreen" />
+  <feature name="NetworkInformation" value="org.apache.cordova.network-information" />   
 <!--
         Enable individual API permissions here.
         The "device" permission is required for the 'deviceready' event.

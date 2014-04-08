@@ -224,6 +224,9 @@
         <Content Include="www\cordova.js" />
     </ItemGroup>
     <ItemGroup>
+        <Content Include="www\cordova.js" />
+    </ItemGroup>
+    <ItemGroup>
         <Content Include="www\assets\css\main.css" />
     </ItemGroup>
     <ItemGroup>

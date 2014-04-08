@@ -35,6 +35,7 @@
     <preference name="exit-on-suspend" value="false" />
     <preference name="Fullscreen" value="true" />
     <preference name="WebViewBounce" value="true" />
+    <preference name="BackgroundColor" value="0xff0000ff" />
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
