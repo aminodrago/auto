@@ -19,8 +19,8 @@
 var app = {
     // Application Constructor
     initialize: function() {
-         //this.bindEvents();
-        this.onDeviceReady();
+         this.bindEvents();
+        //this.onDeviceReady();
     },
     // Bind Event Listeners
     //
@@ -38,7 +38,7 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement =$(id);
+        var parentElement =$("#"+id);
         var appTestElement = $('.app');
         var appCorpElement = $('#appcorp');
         var listeningElement = parentElement.find('.listening');
@@ -48,8 +48,8 @@ var app = {
         receivedElement.attr('style', 'display:block;');
 
 
-        appTestElement.attr('style', 'display:none;');
-        appCorpElement.attr('style', 'display:block;');
+        //appTestElement.attr('style', 'display:none;');
+        //appCorpElement.attr('style', 'display:block;');
         //console.log('Received Event: ' + id);
     }
 };
