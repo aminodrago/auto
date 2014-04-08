@@ -58,11 +58,12 @@ function pullUpAction () {
         });
 
 /***************************/
-$.getJSON( "http://www.automag.tn/mobileapp?node=Listnews-root&page=1&start="+(countnews+7)+"&limit=7", function( data ) {
+var nexCount=eval(countnews)+7;
+$.getJSON( "http://www.automag.tn/mobileapp?node=Listnews-root&page=1&start="+nexCount+"&limit=7", function( data ) {
 
    if(data.items.length>7){
  myScroll.refresh();
-    
+
    }
        
      
